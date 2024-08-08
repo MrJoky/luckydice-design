@@ -1,0 +1,17 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #3498db;
+}
+
+.tilt-container {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.slider {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */
