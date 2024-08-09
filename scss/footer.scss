@@ -1,0 +1,16 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 2rem;
+
+  .footer-link {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: $primary-color;
+  }
+
+  .footer-img {
+    width: 30%;
+  }
+}
