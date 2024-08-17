@@ -1,0 +1,17 @@
+<header>
+  <div class="header-logo"><img src="images/header_logo.png" /></div>
+  <nav class="nav">
+    {{ $currentLang := .Site.Language.Lang }} {{ range .Site.Menus.main }}
+    <li>
+      <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+    </li>
+    {{ end }}
+    <ul>
+					{{ range .Site.Languages }}
+									<li>
+													<a href="{{ .RelPermalink | relLangURL .Lang }}">{{ .LanguageName }}</a>
+									</li>
+					{{ end }}
+	</ul>
+  </nav>
+</header>

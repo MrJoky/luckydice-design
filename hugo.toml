@@ -1,0 +1,48 @@
+baseURL = 'https://example.org/'
+title = 'Timo Dahlenburg Portfolio'
+defaultContentLanguage = "de"
+defaultContentLanguageInSubdir = true
+
+[languages]
+
+ [languages.de]
+  title = "Timo Dahlenburg Portfolio"
+  languageName = "Deutsch"
+  languageCode = "de"
+  weight = 1
+  contentDir = "content/de"
+
+  [languages.de.menu]
+
+   [[languages.de.menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+   [[languages.de.menu.main]]
+    identifier = "about"
+    name = "Über mich"
+    url = "/about/"
+    weight = 2
+
+ [languages.en]
+  title = "Timo Dahlenburg Portfolio"
+  languageName = "English"
+  languageCode = "en"
+  weight = 2
+  contentDir = "content/en"
+  
+  [languages.en.menu]
+
+   [[languages.en.menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+   [[languages.en.menu.main]]
+    identifier = "about"
+    name = "About Me"
+    url = "/about/"
+    weight = 2

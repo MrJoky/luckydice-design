@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ .Title }}</title>
+    {{ range .Site.Data.cdns.css }}
+        {{ partial "cdn.html" (dict "css" .) }}
+    {{ end }}
+    {{ $styles := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    {{ partial "header.html" . }} 
+    
+    {{ block "main" . }}{{ end }}
+    
+    {{ partial "footer.html" . }} 
+
+    {{ block "script" . }}{{ end }} 
+
+    {{ partial "script.html" . }} 
+    {{ range .Site.Data.cdns.js }}
+        {{ partial "cdn.html" (dict "js" .) }}
+    {{ end }}
+
+  </body>
+</html>
