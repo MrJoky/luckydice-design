@@ -1,0 +1,23 @@
+footer {
+ align-items: center;
+ display: flex;
+ justify-content: space-between;
+ margin: 2rem;
+
+ .footer-content {
+  display: flex;
+  flex-direction: column;
+  
+  p {
+   font-size: smaller;
+  }
+
+  h1 {
+   font-size: x-large;
+  }
+
+  img {
+   width: 80px;
+  }
+ }
+}

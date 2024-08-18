@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home | Timo Dahlenburg on Timo Dahlenburg Portfolio</title>
+    <link>http://localhost:1313/de/index/</link>
+    <description>Recent content in Home | Timo Dahlenburg on Timo Dahlenburg Portfolio</description>
+    <generator>Hugo</generator>
+    <language>de</language>
+    <atom:link href="http://localhost:1313/de/index/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lorem ipsum</title>
+      <link>http://localhost:1313/de/index/card1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/de/index/card1/</guid>
+      <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse delectus animi eaque ipsam quos itaque et vel alias? Obcaecati, illum! Voluptatibus, fuga. Tempora inventore amet nulla consectetur commodi illo id.</description>
+    </item>
+    <item>
+      <title>Lorem ipsum</title>
+      <link>http://localhost:1313/de/index/card2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/de/index/card2/</guid>
+      <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse delectus animi eaque ipsam quos itaque et vel alias? Obcaecati, illum! Voluptatibus, fuga. Tempora inventore amet nulla consectetur commodi illo id.</description>
+    </item>
+    <item>
+      <title>Lorem ipsum</title>
+      <link>http://localhost:1313/de/index/card3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/de/index/card3/</guid>
+      <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse delectus animi eaque ipsam quos itaque et vel alias? Obcaecati, illum! Voluptatibus, fuga. Tempora inventore amet nulla consectetur commodi illo id.</description>
+    </item>
+    <item>
+      <title>Lorem ipsum</title>
+      <link>http://localhost:1313/de/index/card4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/de/index/card4/</guid>
+      <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse delectus animi eaque ipsam quos itaque et vel alias? Obcaecati, illum! Voluptatibus, fuga. Tempora inventore amet nulla consectetur commodi illo id.</description>
+    </item>
+  </channel>
+</rss>

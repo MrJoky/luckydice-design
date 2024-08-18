@@ -1,6 +1,7 @@
 @import "variables";
 @import "header";
 @import "footer";
+@import "index";
 
 * {
   font-family: "Ubuntu Sans", sans-serif;
@@ -8,11 +9,27 @@
   padding: 0;
 }
 
-p,
-h1,
-h2,
-h3,
-h4 {
-  padding: 0;
-  margin: 0;
+body {
+  color: $light-gray;
+  background: $radial-grad no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $light-gray;
+  }
+
+  main {
+    min-height: 80vh;
+  }
 }

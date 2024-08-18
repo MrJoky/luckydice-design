@@ -1,17 +1,12 @@
 <header>
-  <div class="header-logo"><img src="images/header_logo.png" /></div>
-  <nav class="nav">
+  <div class="header-logo"><img src="/img/logo.png" alt="Logo Timo Dahlenburg" /></div>
+  <nav class="header-nav">
     {{ $currentLang := .Site.Language.Lang }} {{ range .Site.Menus.main }}
-    <li>
-      <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-    </li>
+      <a href="{{ .URL | relLangURL }}" class="header-nav-link">{{ .Name }}</a>
     {{ end }}
-    <ul>
-					{{ range .Site.Languages }}
-									<li>
-													<a href="{{ .RelPermalink | relLangURL .Lang }}">{{ .LanguageName }}</a>
-									</li>
-					{{ end }}
-	</ul>
+    {{ $currentPage := . }}
+      {{ range .Site.Languages }}
+              <a href="{{ $currentPage.RelPermalink | replaceRE `(\/..\/)?$` (printf `/%s/` .Lang)  }}" class="header-nav-link">{{ .LanguageName }}</a>
+      {{ end }}
   </nav>
 </header>
