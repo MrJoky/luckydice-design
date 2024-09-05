@@ -31,11 +31,8 @@ footer {
       width: 80px; }
 
 .hero {
-  margin-top: 5rem; }
-  .hero .hero-content {
-    text-align: center;
-    width: 60%;
-    margin: 0 auto; }
+  display: flex;
+  align-items: center; }
 
 * {
   font-family: "Ubuntu Sans", sans-serif;

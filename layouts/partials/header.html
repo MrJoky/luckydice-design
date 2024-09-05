@@ -1,12 +1,13 @@
 <header>
-  <div class="header-logo"><img src="/img/logo.png" alt="Logo Timo Dahlenburg" /></div>
-  <nav class="header-nav">
-    {{ $currentLang := .Site.Language.Lang }} {{ range .Site.Menus.main }}
-      <a href="{{ .URL | relLangURL }}" class="header-nav-link">{{ .Name }}</a>
-    {{ end }}
-    {{ $currentPage := . }}
-      {{ range .Site.Languages }}
-              <a href="{{ $currentPage.RelPermalink | replaceRE `(\/..\/)?$` (printf `/%s/` .Lang)  }}" class="header-nav-link">{{ .LanguageName }}</a>
-      {{ end }}
-  </nav>
+	<div class="header-logo"><img src="/img/logo.png" alt="Logo Timo Dahlenburg" /></div>
+	<nav class="header-nav">
+		{{ $currentLang := .Site.Language.Lang }} {{ range .Site.Menus.main }}
+		<a href="{{ .URL | relLangURL }}" class="header-nav-link">{{ .Name }}</a>
+		{{ end }}
+		{{ $currentPage := . }}
+		{{ range .Site.Languages }}
+		<a href="{{ $currentPage.RelPermalink | replaceRE `(\/..\/)?$` (printf `/%s/` .Lang)  }}"
+			class="header-nav-link">{{ .LanguageName }}</a>
+		{{ end }}
+	</nav>
 </header>

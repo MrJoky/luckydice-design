@@ -2,26 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/de/card1/</loc>
-  </url><url>
-    <loc>http://localhost:1313/de/card2/</loc>
-  </url><url>
-    <loc>http://localhost:1313/de/card3/</loc>
-  </url><url>
-    <loc>http://localhost:1313/de/card4/</loc>
-  </url><url>
-    <loc>http://localhost:1313/de/about/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="http://localhost:1313/de/about/"
-                />
-  </url><url>
     <loc>http://localhost:1313/de/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -46,8 +26,6 @@
                 href="http://localhost:1313/de/"
                 />
   </url><url>
-    <loc>http://localhost:1313/de/index/</loc>
-  </url><url>
     <loc>http://localhost:1313/de/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -59,7 +37,5 @@
                 hreflang="de"
                 href="http://localhost:1313/de/tags/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/de/about/about/</loc>
   </url>
 </urlset>
