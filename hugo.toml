@@ -3,6 +3,12 @@ title = 'Timo Dahlenburg Portfolio'
 defaultContentLanguage = "de"
 defaultContentLanguageInSubdir = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
 [languages]
 
  [languages.de]
