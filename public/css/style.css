@@ -33,6 +33,9 @@ footer {
 .hero {
   display: flex;
   align-items: center; }
+  .hero .hero-text {
+    text-align: center;
+    width: 100%; }
 
 * {
   font-family: "Ubuntu Sans", sans-serif;
