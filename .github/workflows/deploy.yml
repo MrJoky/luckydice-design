@@ -3,7 +3,7 @@ name: Deploy Hugo Website to Plesk
 on:
   push:
     branches:
-      - master  # Der Workflow wird ausgelöst, wenn auf den Branch `master` gepusht wird
+      - main  # Der Workflow wird ausgelöst, wenn auf den Branch `master` gepusht wird
 
 jobs:
   build-and-deploy:
