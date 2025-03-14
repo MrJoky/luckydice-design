@@ -3,7 +3,7 @@ name: Deploy Hugo Website to Plesk
 on:
   push:
     branches:
-      - main  # Der Workflow wird ausgelöst, wenn auf den Branch `master` gepusht wird
+      - main  # Der Workflow wird ausgelöst, wenn auf den Branch `main` gepusht wird
 
 jobs:
   build-and-deploy:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # 2. Installiere Hugo
+      # 2. Installiere Hugo Extended
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -26,15 +26,16 @@ jobs:
       - name: Build Hugo Website
         run: hugo
 
-      # 4. Deployment via SSH und SCP
-      - name: Deploy to Server via SSH
+      # 4. Bereite den SSH-Key für das Deployment vor
+      - name: Add SSH key
         run: |
           echo "Adding SSH key"
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          
-          echo "Deploying files via SCP"
-          sshpass -p "${{ secrets.SSH_PASSWORD }}" scp -r -o StrictHostKeyChecking=no ./public/* root@212.227.161.13:/var/www/vhosts/himmelsteil.com/httpdocs/
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}  # SSH-Schlüssel als GitHub Secret
+          ssh-keyscan -H 212.227.161.13 >> ~/.ssh/known_hosts
+        shell: bash
+
+      # 5. Deployment via SCP
+      - name: Deploy to Server via SCP
+        run: scp -r -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ./public/* root@212.227.161.13:/var/www/vhosts/lucky-dice-design.com/httpdocs/
